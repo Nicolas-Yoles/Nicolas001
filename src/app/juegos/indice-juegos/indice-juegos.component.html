@@ -1,1 +1,34 @@
-<h2>Hola mundo!</h2>
+<div class="generico">
+    <div>
+        <h2>Juego estreno del Mes</h2>
+        <div class="contenedor">
+            Titulo: {{juego.titulo}} <br>
+            Productor: {{juego.productor}} <br>
+            Genero: {{juego.genero}}
+        </div>
+    </div>
+    <div>
+        <h2>Top 3 juegos mas jugados</h2>
+        <div *ngFor="let j of juegos, let index = index">
+            <div class="contenedor">
+                <b> <i> Puesto {{index}} </i> </b> <br>
+                Titulo: {{j.titulo}} <br>
+                Productor: {{j.productor}} <br>
+                Genero: {{j.genero}}
+            </div>
+        </div>
+    </div>
+
+    <!-- ver como seguir con esto...
+    <div>
+        <h2>Top 3 juegos mas jugados en Argentina</h2>
+        <div *ngFor="let g of games, let index = index">
+            <div class="contenedor">
+                <b> <i> Puesto {{index}} </i> </b> <br>
+                Titulo: {{g.titulo}} <br>
+                Productor: {{g.productor}} <br>
+                Genero: {{g.genero}}
+            </div>
+        </div>
+    </div> -->
+</div>
